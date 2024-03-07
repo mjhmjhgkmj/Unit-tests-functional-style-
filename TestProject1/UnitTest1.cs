@@ -3,14 +3,18 @@ namespace TestProject1;
 public class PositiveNumberExtensionsTests
 {
     [Test]
-    public void SquareRoot_ShouldReturnSuccess_WhenValidPositiveNumber() =>
+    public void SquareRootShouldReturnSuccessWhenValidPositiveNumber() =>
         Assert.That(16.ToPositiveNumber().SquareRoot().IsSuccess);
 
     [Test]
-    public void SquareRoot_ShouldReturnFailure_WhenUnsupportedType() =>
+    public void SquareRootShouldReturnSuccessWhenValidPositiveReal() =>
+         Assert.That(16.5.ToPositiveNumber().SquareRoot().IsSuccess);
+
+    [Test]
+    public void SquareRootShouldReturnFailureWhenUnsupportedType() =>
         Assert.That('A'.ToPositiveNumber().SquareRoot().IsFailure);
 
     [Test]
-    public void SquareRoot_ShouldReturnFailure_WhenNegativeNumber() =>
+    public void SquareRootShouldReturnFailureWhenNegativeNumber() =>
         Assert.That((-16).ToPositiveNumber().SquareRoot().IsFailure);
 }
