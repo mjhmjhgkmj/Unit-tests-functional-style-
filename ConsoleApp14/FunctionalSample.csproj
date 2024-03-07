@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <PackageReference Include="CSharpFunctionalExtensions" Version="2.41.0" />
-    <PackageReference Include="NUnit" Version="4.1.0" />
   </ItemGroup>
 
 </Project>

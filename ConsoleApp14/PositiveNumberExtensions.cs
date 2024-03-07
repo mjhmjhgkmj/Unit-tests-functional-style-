@@ -10,6 +10,6 @@ public static class PositiveNumberExtensions
             : Result.Success<PositiveNumber<T>, string>(new PositiveNumber<T>(value));
 
     public static Result<double, string> SquareRoot<T>(this Result<PositiveNumber<T>, string> result) where T : struct, IComparable<T> =>
-         result.Map(positiveNumber => Math.Sqrt(Convert.ToDouble(positiveNumber.Value)));
+            result.Map(positiveNumber => Math.Sqrt(Convert.ToDouble(positiveNumber.Value)));
     public record PositiveNumber<T>(T Value) where T : struct, IComparable<T>;
 }
